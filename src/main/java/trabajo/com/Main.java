@@ -29,192 +29,32 @@ public class Main {
     int menu;
     menu = sc.nextInt();
     switch (menu) { 
-        
         case 1:
-            int persona;
-            System.out.println("ingrese la edad de la persona = ");
-            persona = sc.nextInt();
-            if (persona >= 0 && persona < 12) {
-                System.out.println("la persona es un niño de = "+persona+ " años");
-            }else{ 
-                if(persona >= 13 && persona < 17){
-                    System.out.println("la persona es adolecente de"+persona+ " años");
-                }else{ 
-                    if(persona >= 18 && persona < 59) {
-                        System.out.println("la persona es un adulto de"+persona+ " años");
-                    }else if (persona >= 60) {
-                        System.out.println("la persona es un adulto mayor"+persona+ " años");
-                    }
-                } 
-            }
-        break;
-
+            Case1.case1();
+            break;
         case 2:
-            System.out.println("bienvenido a calculadora simple:");
-            System.out.println("1. suma");
-            System.out.println("2. resta");
-            System.out.println("3. multiplicacion");
-            System.out.println("4. divicion");
-            int numero1 = 0;
-            int numero2 = 0;
-            int numero3;
-            int cal;
-            cal = sc.nextInt();
-            System.out.println("ingrese el primer numero");
-            numero1 = sc.nextInt();
-            System.out.println("ingrese el segundo numero");
-            numero2 = sc.nextInt();
-            switch (cal) {
-                case 1:
-                    numero3 = numero1 + numero2;
-                    System.out.println("la suma de los numeros es = "+ numero3);
-                    break;
-                case 2:
-                    numero3 = numero1 - numero2;
-                    System.out.println("la resta de los numeros es = "+ numero3);
-                    break;
-                case 3:
-                    numero3 = numero1 * numero2;
-                    System.out.println("la multiplicacion de los numeros es = "+ numero3);
-                    break;
-                case 4:
-                    numero3 = numero1 / numero2;
-                    System.out.println("la division de los numeros es ="+ numero3);
-                    break;
-                default:
-                    System.out.println("Caso elegido no exite");
-            }
+            Case2.case2();
             break;
-
         case 3:
-            System.out.println("cual es la nota del estudiatne = ");
-            int nota;
-            nota = sc.nextInt();
-            if (nota >= 90 && nota < 100) {
-                System.out.println("la nota del estudiante es = A");
-            }else if(nota >= 80 && nota < 89){
-                System.out.println("la nota del estudiante es = B");
-            }else if(nota >=70 && nota < 79){
-                System.out.println("la nota del estudiante es = C");
-            }else if(nota >= 60 && nota < 69){
-                System.out.println("la nota del estudiante es = D");
-            }else if(nota <=  60){
-                System.out.println("la nota del estudiante es = F");
-            }
- 
+            Case3.case3();
             break;
-
         case 4:
-            int lado1;
-            int lado2;
-            int lado3;
-            System.out.println("Ingrese los datos del triangulos");
-            System.out.println("ingrese el lado 1 = ");    
-            lado1 = sc.nextInt();
-            System.out.println("ingrese el lado 2 = ");
-            lado2 = sc.nextInt();
-            System.out.println("ingrese el lado 3 = ");
-            lado3 = sc.nextInt();
-            if (lado1 == lado2 && lado2 == lado3) {
-                System.out.println("El triangulo es Equilátero");
-            }else if(lado1 == lado2 && lado1 != lado3){
-                System.out.println("El triangulo es Isósceles");
-            }else if (lado2 == lado3 && lado2 != lado1) {
-                System.out.println("El triangulo es Isósceles");
-            }else if (lado3 == lado1 && lado3 != lado2) {
-                System.out.println("El triangulo es Isósceles");
-            }else{
-                System.out.println("El triangulo es Escaleno");
-            }
+            Case4.case4();
             break;
-
         case 5:
-            Double precio;
-            String tipo_cliente;
-            Double resultado;
-            Double resultado2;
-            System.out.println("Ingrese el precio del producto:");
-            precio = sc.nextDouble();
-            sc.nextLine();
-            System.out.println("Ingrese el tipo de cliente (A/B/C):");
-            tipo_cliente = sc.nextLine().toUpperCase();
-            if (tipo_cliente.equals("A")) {
-                resultado = precio * 0.30;
-                resultado2 = precio - resultado;
-                System.out.println("El precio final con descuento es: "+resultado2);
-            }else if(tipo_cliente.equals("B")){
-                resultado = precio * 0.20;
-                resultado2 = precio - resultado;
-                System.out.println("El precio final con descuento es: "+resultado2);
-            }else if(tipo_cliente.equals("C")){
-                resultado = precio * 0.10;
-                resultado2 = precio - resultado;
-                System.out.println("El precio final con descuento es: "+resultado2);
-            }
+            Case5.case5();
             break;
         case 6:
-            System.out.println("horas estadas en el estacinamiento");
-            int horas;
-            int apagar;
-            horas = sc.nextInt();
-            apagar = 5 * horas;
-            System.out.println("La tarifa por el estacionamiento es de = "+apagar);
+            Case6.case6();
             break;
         case 7:
-            System.out.println("1: De Celsius a Fahrenheit");
-            System.out.println("2: De Fahrenheit a Celsius");
-            int he;
-            he = sc.nextInt();
-            switch (he) {
-                case 1:
-                    int celsius;
-                    int resul;
-                    System.out.println("ingrese los grados celcius que quiere convertir a fahrenheit = ");
-                    celsius = sc.nextInt();
-                    resul = (celsius * 9/5) + 32;
-                    System.out.println("Datos convertidos = "+resul);
-                    break;
-                case 2:
-                    int fahrenheit;
-                    int resul2;
-                    System.out.println("ingrese los datos que quiere convertir a celcios = ");
-                    fahrenheit = sc.nextInt();
-                    resul2 = (fahrenheit - 32 ) * 5/9;
-                    System.out.println("Datos convertidos = "+resul2);
-                    break;
-                default:
-                    System.out.println("Caso elegido no exite");  
-                    break;
-            }
+            Case7.case7();
             break;
         case 8:
-            int entero;
-            System.out.println("ingrese un numero entero = ");
-            entero = sc.nextInt();
-            if (entero % 2 == 0) {
-                System.out.println("es un numero es par");
-            }else{
-                System.out.println("no es un numero par");
-            }
+            Case8.case8();
             break;
         case 9:
-            int estacion;
-            System.out.println("ingrese en numero el mes que deseas determinar la estacion del año");
-            System.out.println("1: enero\n 2: febrero \n 3: marzo \n 4: abril \n 5: mayo \n 6: junio \n 7: julio \n 8: agosto \n 9: septiembre \n 10: octubre \n 11: novimbre \n 12: diciembre");
-            estacion = sc.nextInt();
-            if (estacion >= 3 && estacion <= 5) {
-                System.out.println("el mes que elegistes esta en la primavera");
-            }else if (estacion >=6 && estacion <= 8) {
-                System.out.println("el mes que elegistes esta en verano");
-            }else if( estacion >=9 && estacion <= 11){
-                System.out.println("el mes que elegistes esta en otoño");
-            }else if (estacion == 12) {
-                System.out.println("el mes que elegistes esta en invierno");
-            }else if(estacion >= 1 && estacion <= 2){
-                System.out.println("el mes que elegistes esta en invierno");
-            }else{
-                System.out.println("el mes que elegiste no exite");
-            }
+            Case9.case9();
             break;
         case 10:
             System.out.println("no funciona ........ ");
